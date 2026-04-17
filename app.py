@@ -1,8 +1,8 @@
-# ─────────────────────────────────────────────────────────────────────────────
+# =============================================================================
 # Smart Microgrid Management System -- app.py
 # Streamlit Cloud compatible -- No TF/Keras dependency
 # All 8 tabs functional with rule-based simulation fallback
-# ─────────────────────────────────────────────────────────────────────────────
+# =============================================================================
 
 import os
 import sys
@@ -201,7 +201,8 @@ models       = load_models()
 st.markdown("# Smart Microgrid Management System")
 st.markdown("**Predict-then-Optimise** &nbsp;·&nbsp; LSTM Solar &nbsp;·&nbsp; XGBoost Load &nbsp;·&nbsp; DQN Battery Control")
 
-c1,c2,c3,c4 = st.columns(4)
+c1, c2, c3, c4 = st.columns(4)
+
 if df is not None:
     c1.success("Dataset loaded")
 else:
@@ -213,6 +214,7 @@ if models.get("xgb"):
     c3.success("XGBoost ready")
 else:
     c3.warning("XGBoost (not trained)")
+
 c4.info("DQN: rule-based fallback")
 st.divider()
 
