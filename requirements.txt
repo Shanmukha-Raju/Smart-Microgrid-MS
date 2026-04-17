@@ -1,15 +1,16 @@
-# Final Verified Python 3.12.8 Requirements
-tensorflow==2.16.1
-keras==3.3.3
-xgboost==2.0.3
-scikit-learn==1.4.2
-gymnasium==0.29.1
-stable-baselines3==2.3.2
-shimmy==1.3.0
-pandas==2.2.2
-numpy==1.26.4
-matplotlib==3.8.4
-seaborn==0.13.2
-plotly==5.22.0
-streamlit==1.35.0
-joblib==1.4.2
+# Use -cpu version to avoid massive GPU downloads and memory errors
+tensorflow-cpu
+keras
+xgboost
+scikit-learn
+gymnasium
+stable-baselines3
+shimmy
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+streamlit
+joblib
+requests
