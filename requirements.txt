@@ -1,16 +1,14 @@
-# Use -cpu version to avoid massive GPU downloads and memory errors
-tensorflow-cpu
-keras
-xgboost
-scikit-learn
-gymnasium
-stable-baselines3
-shimmy
-pandas
-numpy
-matplotlib
-seaborn
-plotly
-streamlit
-joblib
-requests
+# Smart Microgrid Dashboard — Streamlit Cloud compatible
+# Training libs (tensorflow, gymnasium, stable-baselines3) removed.
+# They are only needed to TRAIN models, not to display the dashboard.
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=5.18.0
+streamlit>=1.35.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+joblib>=1.3.0
+requests>=2.31.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+fpdf2>=2.7.0
