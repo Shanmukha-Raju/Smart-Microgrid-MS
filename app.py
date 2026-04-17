@@ -202,9 +202,17 @@ st.markdown("# Smart Microgrid Management System")
 st.markdown("**Predict-then-Optimise** &nbsp;·&nbsp; LSTM Solar &nbsp;·&nbsp; XGBoost Load &nbsp;·&nbsp; DQN Battery Control")
 
 c1,c2,c3,c4 = st.columns(4)
-c1.success("Dataset loaded") if df is not None else c1.error("Dataset missing")
+if df is not None:
+    c1.success("Dataset loaded")
+else:
+    c1.error("Dataset missing")
+
 c2.info("LSTM: simulation mode")
-c3.success("XGBoost ready") if models.get("xgb") else c3.warning("XGBoost (not trained)")
+
+if models.get("xgb"):
+    c3.success("XGBoost ready")
+else:
+    c3.warning("XGBoost (not trained)")
 c4.info("DQN: rule-based fallback")
 st.divider()
 
